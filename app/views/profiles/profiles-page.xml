@@ -1,0 +1,21 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo" class="bg-gray-100">
+    <ActionBar title="Professional Network" class="bg-blue-600 text-white" />
+    
+    <GridLayout>
+        <ScrollView>
+            <GridLayout columns="*, *" rows="auto" class="profile-grid p-2">
+                <Repeater items="{{ profiles }}" colSpan="2">
+                    <Repeater.itemTemplate>
+                        <GridLayout row="{{ $index }}" col="{{ $index % 2 }}" class="profile-item" tap="{{ $parent.onProfileTap }}">
+                            <StackLayout class="p-2">
+                                <Image src="{{ imageUrl }}" height="150" class="profile-image" />
+                                <Label text="{{ name }}" class="font-bold text-center mt-2" />
+                                <Label text="{{ title }}" class="text-gray-500 text-center text-sm" textWrap="true" />
+                            </StackLayout>
+                        </GridLayout>
+                    </Repeater.itemTemplate>
+                </Repeater>
+            </GridLayout>
+        </ScrollView>
+    </GridLayout>
+</Page>

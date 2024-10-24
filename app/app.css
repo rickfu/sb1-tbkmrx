@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.profile-grid {
+    width: 100%;
+    height: 100%;
+}
+
+.profile-item {
+    background-color: white;
+    border-radius: 10;
+    elevation: 3;
+    margin: 5;
+}
+
+.profile-image {
+    border-radius: 10;
+    stretch: aspectFill;
+}
